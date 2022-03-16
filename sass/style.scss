@@ -1,0 +1,225 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+// ol, ul {
+//     list-style: none;
+// }
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    cursor: url(../img/beer1.ico),auto;
+}
+a{
+    cursor: url(../img/beer.ico),auto;
+}
+.bg2{
+    background-image: url(../img/bg2.jpg) !important;
+    background-position: center !important;
+}
+.bg{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c2008;
+    background-image: url(../img/bg.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    .logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        opacity: 0;
+        img{
+            width: 100%;
+        }
+    }
+    .logo2{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        .logobg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .title{
+        width: 18%;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        background-image: url(../img/title_bg.png);
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+        text-align: center;
+        line-height: 200%;
+        font-size: 3.2vw;
+        font-weight: bold;
+        box-shadow: 5px 5px 3px rgb(0, 0, 0);
+    }
+    .content{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        margin: 0 auto;
+        color: #fff;
+        ul{
+            li{
+                margin: 0 auto 5% auto;
+                font-size: 3vw;
+                font-weight: 700;
+                line-height: 150%;
+            }
+        }
+    }
+    .content_1{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        margin: 0 auto;
+        color: #fff;
+        ul{
+            li{
+                margin: 0 auto 5% auto;
+                font-size: 3vw;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
+    }
+    .content2{
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        margin: 0 auto;
+        color: #fff;
+        ul{
+            li{
+                margin: 5% auto;
+                font-size: 3vw;
+                font-weight: 400;
+                line-height: 150%;
+                // text-align: center;
+            }
+        }
+    }
+    .time{
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        width: 15vw;
+        height: 15vw;
+        font-size: 6vw;
+        line-height: 15vw;
+        text-align: center;
+        font-weight: bold;
+        background-color: #fff;
+        border-radius: 15vw;
+        border: 10px solid #ffaa00;
+        .times{
+            display: inline-block;
+        }
+    }
+    .topic{
+        width: 100%;
+        background-color: #fff;
+        height: 50vh;
+        color: #333;
+        text-align: center;
+        line-height: 50vh;
+        font-size: 10vw;
+        font-weight: bold;
+        border-radius: 5px;
+        border: 10px solid #ffaa00;
+    }
+    .next{
+        display: inline;
+        float: right;
+        margin-top: 10%;
+        font-size: 20px;
+        cursor: url(../img/beer.ico),auto;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .staff{
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+        width: 5vw;
+        a{
+            margin: 2%;
+            .s-btn{
+                width: 5vw;
+                height: 5vw;
+                line-height: 5vw;
+                text-align: center;
+                border-radius: 15vw;
+                font-size: 5vw;
+                color: #fff;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .1s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0318</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/tweenmax/gsap.min.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <a href="step1.html" class="logo">
+            <div>
+                <img src="./img/logo.png" alt="">
+            </div>
+        </a>
+        <div class="logo2" onclick="logo()">
+            <img class="logobg" src="./img/logo_1.png" alt="">
+            <img src="./img/logo_2.png" alt="">
+        </div>
+    </div>
+    <script>
+        gsap.fromTo(".logobg", {
+            alpha: 0 ,
+            scale: 0.3,
+        }, {
+            repeat: -1,
+            duration: 0.8,
+            alpha: 1,
+            scale: 1
+        })
+        function logo(){
+            gsap.fromTo(".logo", {
+                alpha: 0,
+                y: -10
+            }, {
+                y:0,
+                duration: 0.8,
+                alpha: 1,
+            })
+            gsap.fromTo(".logo2", {
+                alpha: 1
+            }, {
+                alpha: 0,
+                display:"none"
+            })
+            
+        }
+    </script>
+</body>
+</html>

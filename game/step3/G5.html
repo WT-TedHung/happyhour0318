@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0318</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <script src="../../js/tweenmax/gsap.min.js"></script>
+</head>
+<body>
+    <div class="bg bg2">
+        <div class="title">第三階段</div>
+        <div class="time">
+            <div class="times"><span id="time">60</span></div><span>s</span>
+        </div>
+        <div class="content">
+            <div class="topic" id="topic">
+                <i class="fa-solid fa-question"></i>
+            </div>
+            <div class="next" onclick="Next()">
+                下一題 <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="staff">
+            <a  href="javascript:;" onclick="gamestart()">
+                <div class="s-btn">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </a>
+            <a  href="./G6.html">
+                <div class="s-btn">
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+            </a>
+            <a  href="../step2/G1.html">
+                <div class="s-btn">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="../../js/index.js"></script>
+    <script>
+        var game1G1 = step3G5
+        function gamestart() {
+            var odiv = document.getElementById("time");
+            var topic = document.getElementById("topic");
+            var count = 60;
+            odiv.innerHTML=count;
+            var timer = null;
+            timer = setInterval(function () {
+                if (count >= 1) {
+                    count = count - 1;
+                    odiv.innerHTML = count;
+                }
+                if (count == 0){
+                    clearInterval(timer);
+                    topic.innerHTML="Time Over";
+                }
+                if(count <= 10){
+                    gsap.fromTo(".times", {
+                        alpha: 0.8,
+                        scale: 1.5
+                    }, {
+                        alpha: 1,
+                        duration: 0.5,
+                        scale: 1
+                    })
+                }
+            }, 1000);
+            var topicTX = game1G1.shift();
+            topic.innerHTML=topicTX;
+        }
+
+        function Next() {
+            topicTX = game1G1.shift();
+            topic.innerHTML=topicTX;
+        }
+    </script>
+</body>
+</html>

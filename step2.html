@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0318</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/tweenmax/gsap.min.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="title">遊戲辦法</div>
+        <a href="./game/step1/G1.html">
+            <div class="content2">
+                <ul>
+                    <li>
+                        題目主題共3Run，每Run限時1分鐘，分別為:<br>物品類>生物類>四字詞語類
+                    </li>
+                    <li>
+                        <!-- 依模擬畫面搶答「電影名稱 」 -->
+                        各組請推派一名進行題目比手畫腳，其餘成員則猜題解答
+                    </li>
+                    <li>
+                        <!-- Call in 070專線(865148)搶答 -->
+                        總分最快抵達20分的隊伍獲勝
+                    </li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <script>
+        gsap.fromTo(".content2", {
+            alpha: 0,
+            y:10
+        }, {
+            alpha: 1,
+            y:0,
+            duration: 1,
+        })
+    </script>
+</body>
+</html>
